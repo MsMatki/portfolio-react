@@ -1,0 +1,10 @@
+.NavItem{
+    list-style-type: none;
+    cursor: pointer;
+    
+}
+
+.NavItem a{
+    text-decoration: none;
+    color: black;
+}

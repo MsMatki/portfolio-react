@@ -1,10 +1,10 @@
 import React from 'react';
 import NavItem from '../NavItem/NavItem';
-import classes from './Nav.css'
+import classes from './ResponsiveNav.css'
 
-const Nav = (props) => {
+const ResponsiveNav = () => {
     return(
-        <nav className={classes.Nav}>
+        <nav className={classes.ResponsiveNav}>
             <ul>
                 <NavItem>Home</NavItem>
                 <NavItem>About</NavItem>
@@ -13,7 +13,7 @@ const Nav = (props) => {
                 <NavItem>Contact</NavItem>
             </ul>
         </nav>
-    )
+    );
 }
 
-export default Nav;
+export default ResponsiveNav;

@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
-import Header from '../../Components/Navigation/Header';
-import Footer from '../../Components/Navigation/Footer';
+import Header from '../../Components/Navigation/Header/Header';
+import Footer from '../../Components/Navigation/Footer/Footer';
 
 class Portfolio extends Component{
     render(){
@@ -12,3 +12,5 @@ class Portfolio extends Component{
         );
     }
 }
+
+export default Portfolio;

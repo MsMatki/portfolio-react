@@ -1,0 +1,21 @@
+.ResponsiveNav{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    background-color: blue;
+    box-shadow: 0 2px 6px -2px grey;
+}
+
+.ResponsiveNav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    margin:0;
+    padding:0;
+    width: 50%;
+}
+
+
