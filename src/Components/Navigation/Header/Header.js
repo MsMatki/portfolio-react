@@ -4,10 +4,12 @@ import classes from './Header.css'
 import ResponsiveNav from './ResponsiveNav/ResponsiveNav'
 
 const Header = (props) => {
+
+
     return(
         <header className={classes.Header}>
             <Nav/>
-            <ResponsiveNav/>
+            <ResponsiveNav scrollSlideNav={props.scrollSlideNav}/>
         </header>
     )
 }

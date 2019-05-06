@@ -1,11 +1,13 @@
 .ResponsiveNav{
-    height: 100%;
+    height: 60px;
     width: 100%;
     display:flex;
     align-items:center;
     justify-content:flex-end;
-    background-color: blue;
+    background-color: white;
     box-shadow: 0 2px 6px -2px grey;
+    position: fixed;
+    transition: 0.3s;
 }
 
 .ResponsiveNav ul{
@@ -18,4 +20,6 @@
     width: 50%;
 }
 
-
+.ResponsiveNav a{
+    color: black;
+}
