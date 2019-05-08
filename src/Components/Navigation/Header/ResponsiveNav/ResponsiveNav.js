@@ -1,8 +1,16 @@
 import React from "react";
-import NavItem from "../NavItem/NavItem";
+import NavigationItems from "../NavigationItems/NavigationItems";
 import classes from "./ResponsiveNav.css";
+import HambMenu from "../HambMenu/HambMenu";
 
 const ResponsiveNav = props => {
+  const HambColor = {
+    backgroundColor: "black"
+  };
+  const navLinkColor = {
+    color: "black"
+  };
+
   return (
     <nav
       className={classes.ResponsiveNav}
@@ -12,13 +20,8 @@ const ResponsiveNav = props => {
           : { transform: "translateY(-60px)", opacity: "1" }
       }
     >
-      <ul>
-        <NavItem>Home</NavItem>
-        <NavItem>About</NavItem>
-        <NavItem>Skills</NavItem>
-        <NavItem>Portfolio</NavItem>
-        <NavItem>Contact</NavItem>
-      </ul>
+      <HambMenu color={HambColor} />
+      <NavigationItems color={navLinkColor}/>
     </nav>
   );
 };

@@ -2,8 +2,8 @@ import React from 'react';
 import classes from './NavItem.css'
 
 const NavItem = (props) => (
-    <li className={classes.NavItem}>
-        <a href="\">{props.children}</a>
+    <li className={classes.NavItem} >
+        <a href="\" style={props.color}>{props.children}</a>
     </li>
 );
 

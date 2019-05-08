@@ -1,0 +1,18 @@
+.SideDrawer{
+    height:100vh;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+}
+
+@media(min-width: 500px){
+    .SideDrawer{
+        width: 60%;
+    }
+}
+
+@media(min-width: 768px){
+    .SideDrawer{
+        display:none;
+    }
+}

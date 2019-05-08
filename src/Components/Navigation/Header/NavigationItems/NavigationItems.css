@@ -1,0 +1,23 @@
+.NavigationItems{
+    display: none;
+}
+
+.NavigationItems a{
+    color: white;
+}
+
+
+@media(min-width: 768px){
+    
+    .NavigationItems{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+        margin:0;
+        padding:0;
+        width: 50%;
+    }
+    
+  
+}

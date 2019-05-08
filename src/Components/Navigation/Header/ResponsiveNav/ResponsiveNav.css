@@ -10,16 +10,3 @@
     transition: 0.3s;
 }
 
-.ResponsiveNav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items:center;
-    margin:0;
-    padding:0;
-    width: 50%;
-}
-
-.ResponsiveNav a{
-    color: black;
-}

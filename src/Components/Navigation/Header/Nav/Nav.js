@@ -1,19 +1,15 @@
-import React from 'react';
-import NavItem from '../NavItem/NavItem';
-import classes from './Nav.css'
+import React from "react";
+import classes from "./Nav.css";
+import HambMenu from "../HambMenu/HambMenu";
+import NavigationItems from "../NavigationItems/NavigationItems";
 
-const Nav = (props) => {
-    return(
-        <nav className={classes.Nav}>
-            <ul>
-                <NavItem>Home</NavItem>
-                <NavItem>About</NavItem>
-                <NavItem>Skills</NavItem>
-                <NavItem>Portfolio</NavItem>
-                <NavItem>Contact</NavItem>
-            </ul>
-        </nav>
-    )
-}
+const Nav = props => {
+  return (
+    <nav className={classes.Nav}>
+      <HambMenu />
+      <NavigationItems />
+    </nav>
+  );
+};
 
 export default Nav;
