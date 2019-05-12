@@ -20,7 +20,7 @@ const ResponsiveNav = props => {
           : { transform: "translateY(-60px)", opacity: "1" }
       }
     >
-      <HambMenu color={HambColor} />
+      <HambMenu color={HambColor} toggleDrawer={props.toggleDrawer}/>
       <NavigationItems color={navLinkColor}/>
     </nav>
   );

@@ -8,7 +8,8 @@ import SideDrawer from '../../Components/Navigation/SideDrawer/SideDrawer'
 
 class Portfolio extends Component {
   state = {
-    responsiveNavSlideIn: false
+    responsiveNavSlideIn: false,
+    toggleSideDrawer: false
   };
 
   componentDidMount() {
@@ -25,12 +26,24 @@ class Portfolio extends Component {
     });
   }
 
+  toggleSideDrawerHandler = () => {
+    if(!this.state.toggleSideDrawer){
+        this.setState({
+            toggleSideDrawer: true
+        })
+    }else{
+        this.setState({
+            toggleSideDrawer: false
+        })
+    }
+  }
+
   render() {
     console.log(this.state.responsiveNavSlideIn);
     return (
       <div className={classes.Portfolio}>
-        <Header scrollSlideNav={this.state.responsiveNavSlideIn} />
-        <SideDrawer/>
+        <Header scrollSlideNav={this.state.responsiveNavSlideIn} toggleDrawer={this.toggleSideDrawerHandler}/>
+        <SideDrawer sideDrawer={this.state.toggleSideDrawer}/>
         <Hover />
         <About />
         <Footer />

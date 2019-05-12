@@ -6,7 +6,7 @@ import NavigationItems from "../NavigationItems/NavigationItems";
 const Nav = props => {
   return (
     <nav className={classes.Nav}>
-      <HambMenu />
+      <HambMenu toggleDrawer={props.toggleDrawer}/>
       <NavigationItems />
     </nav>
   );

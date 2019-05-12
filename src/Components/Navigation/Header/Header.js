@@ -8,8 +8,8 @@ const Header = (props) => {
 
     return(
         <header className={classes.Header}>
-            <Nav/>
-            <ResponsiveNav scrollSlideNav={props.scrollSlideNav}/>
+            <Nav toggleDrawer={props.toggleDrawer}/>
+            <ResponsiveNav scrollSlideNav={props.scrollSlideNav} toggleDrawer={props.toggleDrawer}/>
         </header>
     )
 }

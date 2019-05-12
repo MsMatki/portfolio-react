@@ -4,7 +4,7 @@ import NavigationItems from '../Header/NavigationItems/NavigationItems'
 
 const SideDrawer = (props) => {
     return(
-        <div className={classes.SideDrawer}>
+        <div className={classes.SideDrawer} style={!props.sideDrawer ? {transform: 'translateX(-100%)'} : {transform: 'translateX(0)'}}>
             <NavigationItems/>
         </div>
     );
