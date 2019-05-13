@@ -3,8 +3,10 @@ import NavItem from "./NavItem/NavItem";
 import classes from './NavigationItems.css'
 
 const NavigationItems = (props) => {
+
+
   return (
-    <ul className={classes.NavigationItems} >
+    <ul className={classes.NavigationItems} style={props.visible}>
       <NavItem color={props.color}>Home</NavItem>
       <NavItem color={props.color}>About</NavItem>
       <NavItem color={props.color}>Skills</NavItem>

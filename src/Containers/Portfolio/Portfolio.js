@@ -4,7 +4,10 @@ import Footer from "../../Components/Navigation/Footer/Footer";
 import classes from "./Portfolio.css";
 import Hover from "../../Components/Hover/Hover";
 import About from "../../Components/About/About";
-import SideDrawer from '../../Components/Navigation/SideDrawer/SideDrawer'
+import SideDrawer from '../../Components/Navigation/SideDrawer/SideDrawer';
+import Skills from '../../Components/Skills/Skills';
+import Projects from '../../Components/Projects/Projects';
+
 
 class Portfolio extends Component {
   state = {
@@ -14,7 +17,7 @@ class Portfolio extends Component {
 
   componentDidMount() {
     document.addEventListener("scroll", () => {
-      if (window.pageYOffset >= 200) {
+      if (window.pageYOffset >= 300) {
         this.setState({
           responsiveNavSlideIn: true
         });
@@ -46,6 +49,8 @@ class Portfolio extends Component {
         <SideDrawer sideDrawer={this.state.toggleSideDrawer}/>
         <Hover />
         <About />
+        <Skills/>
+        <Projects/>
         <Footer />
       </div>
     );

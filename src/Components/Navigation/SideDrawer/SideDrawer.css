@@ -1,9 +1,11 @@
 .SideDrawer{
     height:100vh;
     background-color: white;
-    width: 100%;
+    width: 80%;
     position: fixed;
-    transition: 0.3s;
+    transition: 0.6s ease-in-out;
+    box-shadow: 3px 0 3px -1px rgba(0,0,0,0.3);
+    z-index: 200;
 }
 
 @media(min-width: 500px){
