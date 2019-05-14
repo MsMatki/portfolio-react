@@ -1,42 +1,6 @@
 
 /* Global Layout CSS */
 
-/* :global .row{
-    display: flex;
-    flex-direction: row;
-  }
-  
-  :global .column{
-    display:flex;
-    flex-direction: column;
-  }
-  
-  :global .container{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  @media(min-width:576px){
-    :global .container{
-      max-width:540px;
-    }
-  }
-  
-  @media(min-width:768px){
-    :global .container{
-      max-width:720px;
-    }
-  }
-  
-  @media(min-width:992px){
-    :global .container{
-      max-width:960px;
-    }
-  }
-  
-  @media(min-width:1200px){
-    :global .container{
-      max-width:1140px;
-    }
-  } */
+:global .container{
+  padding: 80px 0;
+}

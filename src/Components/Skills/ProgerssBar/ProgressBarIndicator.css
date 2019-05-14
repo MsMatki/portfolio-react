@@ -1,0 +1,25 @@
+.ProgressBarIndicator{
+    background-color: rgba(80, 80, 80, 0.3);
+    height:5px;
+    border-radius:0;
+    margin-bottom:30px;
+}
+
+.ProgressBar h6{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ProgressBar h6 span{
+    box-sizing: border-box;
+    padding: 4px 8px 0;
+    background-color: rgba(80, 80, 80, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 8px;
+    font-size: 10px;
+    color: white;
+}
