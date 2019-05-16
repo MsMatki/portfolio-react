@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import classes from './Carousal.css'
 import Coverflow from 'react-coverflow';
-import { StyleRoot } from 'radium';
+import { directive } from '@babel/types';
+
 
 class Carousal extends Component {
 
@@ -9,12 +10,13 @@ class Carousal extends Component {
         render() {
 
                 return (
-                      
-                                <Coverflow width="960" height="500"
+                      <div className={classes.Carousal}>
+                                <Coverflow width="960" height="800"
                                         displayQuantityOfSide={3}
                                         clickable
                                         enableScroll={false}
                                         enableHeading
+                                        
                                 >
 
                                         <img src="https://picsum.photos/500/500/?random" alt="1" />
@@ -25,7 +27,7 @@ class Carousal extends Component {
                                         <img src="https://picsum.photos/500/505/?random" alt="5" />
 
                                 </Coverflow>
-                        
+                                </div>
                 )
         }
 }
