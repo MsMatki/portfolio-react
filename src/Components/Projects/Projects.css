@@ -1,4 +1,10 @@
 .Projects{
-    height:100vh;
+   text-align: center;
+   background-color: rgb(230,230,230);
     
+}
+
+.Projects h1{
+    padding-top: 2em;
+    font-weight: bold;
 }

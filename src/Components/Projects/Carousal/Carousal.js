@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import classes from './Carousal.css'
 import Coverflow from 'react-coverflow';
-import { directive } from '@babel/types';
+import img1 from '../../../Assets/Images/img1.jpg'
+import img2 from '../../../Assets/Images/img2.png'
+import img3 from '../../../Assets/Images/img3.png'
+import img4 from '../../../Assets/Images/img4.png'
+import img5 from '../../../Assets/Images/img5.jpg'
+import img6 from '../../../Assets/Images/img6.png'
 
 
 class Carousal extends Component {
@@ -11,20 +16,20 @@ class Carousal extends Component {
 
                 return (
                       <div className={classes.Carousal}>
-                                <Coverflow width="960" height="800"
+                                <Coverflow width="100%" height="500"
                                         displayQuantityOfSide={3}
-                                        clickable
                                         enableScroll={false}
                                         enableHeading
-                                        
+                                        active={0}
+                                      
                                 >
 
-                                        <img src="https://picsum.photos/500/500/?random" alt="1" />
-                                        <img src="https://picsum.photos/500/501/?random" alt="2" />
-                                        <img src="https://picsum.photos/500/502/?random" alt="3" />
-                                        <img src="https://picsum.photos/500/503/?random" alt="4" />
-                                        <img src="https://picsum.photos/500/504/?random" alt="5" />
-                                        <img src="https://picsum.photos/500/505/?random" alt="5" />
+                                        <img src={img1} alt="CoolMovies" />
+                                        <img src={img2} alt="Neighbourhood Map" />
+                                        <img src={img3} alt="MyReads" />
+                                        <img src={img4} alt="Frogger" />
+                                        <img src={img5} alt="Restaurant Reviews" />
+                                        <img src={img6} alt="Memory" />
 
                                 </Coverflow>
                                 </div>
