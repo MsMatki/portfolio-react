@@ -1,0 +1,22 @@
+#ContactInfo{
+ color:white;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+#ContactInfo > span{
+ color: #007bff;
+ font-size: 2em;
+ padding-bottom: 15px;
+}
+
+#ContactInfo h6{
+ color: #007bff;
+}
+
+#ContactInfo p{
+ font-size: 1.1em;
+ color: rgb(200,200,200)
+}

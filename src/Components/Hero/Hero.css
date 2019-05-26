@@ -1,11 +1,11 @@
 .Hero{
-    background-image: url('../../Assets/Images/hero-background.jpg');
+    background-image: url('../../Assets/Images/hero2-background.jpg');
     height: 110vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .Dark{
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0);
     height:100%;
 }

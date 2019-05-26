@@ -2,8 +2,19 @@
     
   background: rgb(255, 255, 255) !important;
 }
+
+
 :global .coverflow__text__39hqd{
-  background-color:rgba(0,0,0,0.8) !important;
+  background-color:rgba(0,0,0,0.9) !important;
+  color: lightblue !important;
+}
+
+@media(max-width: 768px){
+  .Carousal{
+    display: flex;
+    flex-direction: column;
+    
+  }
 }
 
 

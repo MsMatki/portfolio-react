@@ -9,6 +9,8 @@
     width:100%;
     display: flex;
     justify-content: space-between;
+    font-size: 14px;
+    font-family: 'Josefin Sans'
 }
 
 .ProgressBar h6 span{

@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Skills.css";
-import ProgressBarIndicator from './ProgerssBar/ProgressBarIndicator'
+import ProgressBarIndicator from './ProgerssBar/ProgressBarIndicator';
+import icons from '../../Assets/Icons/et-line.css'
 
 const Skills = props => {
 
@@ -12,47 +13,47 @@ const Skills = props => {
       <div className="container">
         <div className="row">
           <div className="col-sm-6 col-lg-3">
-            <span><i className="fas fa-book icon"></i></span><br/>
+            <span className={icons.iconBookOpen}></span><br/>
             <h5>Education</h5>
             
-            <ul>
+            <ul className={classes.Education}>
               <li>
-                <h6>Lorem, ipsum.</h6>
-                <p>Lorem, ipsum dolor.</p>
+                <h6>Nanodegree Udacity</h6>
+                <p>Front End Web Developer</p>
               </li>
               <li>
-                <h6>Lorem, ipsum.</h6>
-                <p>Lorem, ipsum dolor.</p>
+                <h6>School of Graphic Designs</h6>
+                <p>Graphic Designer</p>
               </li>
               <li>
-                <h6>Lorem, ipsum.</h6>
-                <p>Lorem, ipsum dolor.</p>
+                <h6>Treehouse</h6>
+                <p>Front End Web Development</p>
               </li>
             </ul>
           </div>
 
           <div className="col-sm-6 col-lg-3">
-          <span><i className="fas fa-layer-group icon"></i></span><br/>
+          <span className={icons.iconLayers}></span><br/>
             <h5>Experience</h5>
            
             <ul>
               <li>
-                <h6>Lorem, ipsum.</h6>
-                <p>Lorem, ipsum dolor.</p>
+                <h6>mobileLIVE inc</h6>
+                <p className="mb-0">Sep 2018 - Present</p>
+                <p className="mb-0">Front End Developer</p>
+                <p>Toronto, Canada</p>
               </li>
               <li>
-                <h6>Lorem, ipsum.</h6>
-                <p>Lorem, ipsum dolor.</p>
-              </li>
-              <li>
-                <h6>Lorem, ipsum.</h6>
-                <p>Lorem, ipsum dolor.</p>
+                <h6>Freelancer</h6>
+                <p className="mb-0">Jan 2018 - Aug 2018</p>
+                <p className="mb-0">Web Developer / Designer</p>
+                <p>Limerick, Ireland</p>
               </li>
             </ul>
           </div>
 
           <div className="col-lg-6">
-          <span><i className="fab fa-react icon"></i></span><br/>
+          <span className={icons.iconGenius}></span><br/>
             <h5>My Skills</h5>
             
             <ProgressBarIndicator/>

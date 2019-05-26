@@ -7,6 +7,7 @@ import About from "../../Components/About/About";
 import SideDrawer from "../../Components/Navigation/SideDrawer/SideDrawer";
 import Skills from "../../Components/Skills/Skills";
 import Projects from "../../Components/Projects/Projects";
+import Contact from '../../Components/Contact/Contact'
 
 class Portfolio extends Component {
   state = {
@@ -50,7 +51,7 @@ class Portfolio extends Component {
   };
 
   render() {
-    console.log(this.state.responsiveNavSlideIn);
+    
     return (
       <div className={classes.Portfolio}>
         <Header
@@ -62,6 +63,7 @@ class Portfolio extends Component {
         <About />
         <Skills />
         <Projects />
+        <Contact/>
         <Footer />
       </div>
     );
