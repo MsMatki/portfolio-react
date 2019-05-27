@@ -15,7 +15,7 @@ const About = props => {
           <div className="col-sm-12 col-md-6 col-lg-7">
             <h2>About Me</h2>
             <h6>Front End Web Developer</h6>
-            <hr />
+            <hr className={classes.hr}/>
             <p>
               I am Bartol Bilankov a Front End Web Developer living in
               Manchester. I’m extremely passionate about Web Development and

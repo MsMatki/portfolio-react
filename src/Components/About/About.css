@@ -9,3 +9,7 @@
     height:100%;
 }
 
+.hr{
+    background: linear-gradient(to right, #007bff 20%, #E1E1E1 20%);
+    height: 1px;
+}
