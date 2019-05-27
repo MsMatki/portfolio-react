@@ -1,25 +1,58 @@
-.HambMenu {
-    width: 40px;
-    height: 60px;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    box-sizing: border-box;
+#navIcon1{
+    width:38px;
+    height: 30px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
     cursor: pointer;
-    z-index:100;
-}
+    z-index: 100;
+  }
 
-.HambMenu div {
-    width: 90%;
-    height: 3px;
-    background-color: white;
-}
 
+  #navIcon1 span{
+    display: block;
+    position: absolute;
+    height: 4px;
+    border-radius: 1px;
+    width: 100%;
+    background: white;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .3s ease-in-out;
+  }
+
+  #navIcon1 span:nth-child(1) {
+    top: 0px;
+  }
+  
+  #navIcon1 span:nth-child(2) {
+    top: 13px;
+  }
+
+  #navIcon1 span:nth-child(3) {
+    top: 26px;
+  }
+
+   #navIcon1.open span:nth-child(1) {
+    top: 13px;
+    transform: rotate(135deg);
+    background: #007bff;
+  }
+  
+   #navIcon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  
+  #navIcon1.open span:nth-child(3) {
+    top: 13px;
+    transform: rotate(-135deg);
+    background: #007bff;
+  }
 
 @media (min-width: 768px) {
-    .HambMenu {
+    #navIcon1 {
         display: none;
     }
     

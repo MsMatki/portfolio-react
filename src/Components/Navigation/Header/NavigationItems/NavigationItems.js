@@ -1,19 +1,50 @@
-import React from "react";
+import React, { Component } from "react";
 import NavItem from "./NavItem/NavItem";
-import classes from './NavigationItems.css'
+import classes from "./NavigationItems.css";
 
-const NavigationItems = (props) => {
+class NavigationItems extends Component {
+  state = {
+    navTitles: ["home", "about", "skills", "portfolio", "contact"],
+    windowOffset: 0,
+    scrollDuration: 1300
+  };
 
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      if (window.pageYOffset >= 500) {
+        this.setState({
+          windowOffset: -80,
+          scrollDuration: 1000
+        });
+      } else {
+        this.setState({
+          windowOffset: 0,
+          scrollDuration: 1300
+        });
+      }
+    })
+   
+  }
 
-  return (
-    <ul className={classes.NavigationItems} style={props.visible}>
-      <NavItem color={props.color}>Home</NavItem>
-      <NavItem color={props.color}>About</NavItem>
-      <NavItem color={props.color}>Skills</NavItem>
-      <NavItem color={props.color}>Portfolio</NavItem>
-      <NavItem color={props.color}>Contact</NavItem>
-    </ul>
-  );
-};
+  render() {
+    return (
+      <ul className={classes.NavigationItems} style={this.props.visible}>
+        {this.state.navTitles.map((title, index) => {
+          return (
+            <NavItem
+              scrollDuration={this.state.scrollDuration}
+              windowOffset={this.state.windowOffset}
+              key={index}
+              title={title}
+              color={this.props.color}
+            >
+              {title}
+            </NavItem>
+          );
+        })}
+      </ul>
+    );
+  }
+}
 
 export default NavigationItems;

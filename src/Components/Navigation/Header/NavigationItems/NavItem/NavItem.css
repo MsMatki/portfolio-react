@@ -1,10 +1,26 @@
 .NavItem{
     list-style-type: none;
     cursor: pointer;
-    
+    color: white;
+    text-transform: capitalize;
 }
 
-.NavItem a{
+.Link{
     text-decoration: none;
-    color: white;
+    width:100%;
+    height:100%;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    font-family: "Josefin Sans"
+}
+
+.active{
+    color:#007bff !important;
+}
+
+@media(min-width:768px){
+    .NavItem{
+        padding: 0 20px;
+    }
 }

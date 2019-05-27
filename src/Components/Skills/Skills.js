@@ -8,7 +8,7 @@ const Skills = props => {
    
 
   return (
-    <section className={classes.Skills}>
+    <section className={classes.Skills} id="skills">
       <div className={classes.Paralax}>
       <div className="container">
         <div className="row">

@@ -4,7 +4,7 @@ import profileImage from "../../Assets/Images/Profile2.png";
 
 const About = props => {
   return (
-    <section className={classes.About}>
+    <section className={classes.About} id="about">
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-6 col-lg-5">

@@ -1,16 +1,23 @@
-import React, { Fragment } from "react";
+import React, { Component } from "react";
 import classes from "./HambMenu.css";
 
-const HambMenu = props => {
+class HambMenu extends Component{
+
+render(){
+
+
   return (
-    <Fragment>
-      <div className={classes.HambMenu} onClick={props.toggleDrawer}>
-        <div style={props.color}/>
-        <div style={props.color}/>
-        <div style={props.color}/>
-      </div>
-    </Fragment>
+    <div
+      id={classes.navIcon1}
+      onClick={this.props.toggleDrawer}
+      className={this.props.openClass}
+    >
+      <span style={this.props.color}/>
+      <span style={this.props.color}/>
+      <span style={this.props.color}/>
+    </div>
   );
+}
 };
 
 export default HambMenu;

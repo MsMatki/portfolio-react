@@ -4,7 +4,7 @@ import Carousal from './Carousal/Carousal'
 
 const Projects = (props) => {
     return(
-        <section className={classes.Projects}>
+        <section className={classes.Projects} id="portfolio">
         <h1>My Portfolio</h1>
             <Carousal/>
         </section>

@@ -9,7 +9,7 @@ const Nav = props => {
     <nav className={classes.Nav}>
       <div className={`container ${classes.Container}`}>
         <LogoHeader />
-        <HambMenu toggleDrawer={props.toggleDrawer} />
+        <HambMenu openClass={props.openClass} toggleDrawer={props.toggleDrawer} />
         <NavigationItems />
       </div>
     </nav>
