@@ -14,22 +14,24 @@ class ProgressBarIndicator extends Component {
 
   render() {
     return (
-      <div className={classes.ProgressBar}>
-        {this.state.skills.map(skill => {
-          return (
-            <Fragment key={skill.title}>
-              <h6>
-                {skill.title}<span>{skill.indicator}%</span>
-              </h6>
-              <ProgressBar
-                animated
-                now={skill.indicator}
-                className={classes.ProgressBarIndicator}
-              />
-            </Fragment>
-          );
-        })}
-      </div>
+      
+           <div className={classes.ProgressBar}>
+           {this.state.skills.map(skill => {
+             return (
+               <Fragment key={skill.title}>
+                 <h6>
+                   {skill.title}<span>{skill.indicator}%</span>
+                 </h6>
+                 <ProgressBar
+                   animated
+                   now={skill.indicator}
+                   className={classes.ProgressBarIndicator}
+                 />
+               </Fragment>
+             );
+           })}
+         </div>
+        
     );
   }
 }

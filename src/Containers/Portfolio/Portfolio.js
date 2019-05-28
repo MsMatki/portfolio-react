@@ -13,11 +13,36 @@ class Portfolio extends Component {
   state = {
     responsiveNavSlideIn: false,
     toggleSideDrawer: false,
-    hambOpenClass: ""
+    hambOpenClass: "",
+    skillsSection: false,
+    aboutSection: false,
+    portfolioSection: false,
+    contactSection: false
   };
 
   componentDidMount() {
+
+   const skills = document.querySelector('#skills').offsetTop;
+   const about = document.querySelector('#about').offsetTop;
+   const portfolio = document.querySelector('#portfolio').offsetTop;
+   const contact = document.querySelector('#contact').offsetTop;
+    
+
     document.addEventListener("scroll", () => {
+
+      if(window.pageYOffset >= skills - 100){
+        this.setState({ skillsSection: true })
+      }
+      if(window.pageYOffset >= about){
+        this.setState({ aboutSection: true })
+      }
+      if(window.pageYOffset >= portfolio){
+        this.setState({ portfolioSection: true })
+      } 
+      if(window.pageYOffset >= contact){
+        this.setState({ contactSection: true })
+      }
+    
       // Navigation slide in top when scrolling down
       if (window.pageYOffset >= 300) {
         this.setState({
@@ -66,7 +91,7 @@ class Portfolio extends Component {
         <SideDrawer sideDrawer={this.state.toggleSideDrawer} />
         <Hero />
         <About />
-        <Skills />
+        <Skills skillsSection={this.state.skillsSection}/>
         <Projects />
         <Contact />
         <Footer />
