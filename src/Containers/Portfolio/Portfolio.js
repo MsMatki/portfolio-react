@@ -30,11 +30,12 @@ class Portfolio extends Component {
 
     document.addEventListener("scroll", () => {
 
-      if(window.pageYOffset >= skills - 100){
-        this.setState({ skillsSection: true })
-      }
-      if(window.pageYOffset >= about){
+     
+      if(window.pageYOffset >= about - 400){
         this.setState({ aboutSection: true })
+      }
+      if(window.pageYOffset >= skills - 200){
+        this.setState({ skillsSection: true })
       }
       if(window.pageYOffset >= portfolio){
         this.setState({ portfolioSection: true })
@@ -42,7 +43,6 @@ class Portfolio extends Component {
       if(window.pageYOffset >= contact){
         this.setState({ contactSection: true })
       }
-    
       // Navigation slide in top when scrolling down
       if (window.pageYOffset >= 300) {
         this.setState({
@@ -90,7 +90,7 @@ class Portfolio extends Component {
         />
         <SideDrawer sideDrawer={this.state.toggleSideDrawer} />
         <Hero />
-        <About />
+        <About aboutSection={this.state.aboutSection}/>
         <Skills skillsSection={this.state.skillsSection}/>
         <Projects />
         <Contact />

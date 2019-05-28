@@ -13,7 +13,7 @@ class NavigationItems extends Component {
     document.addEventListener('scroll', () => {
       if (window.pageYOffset >= 500) {
         this.setState({
-          windowOffset: -80,
+          windowOffset: -100,
           scrollDuration: 1000
         });
       } else {

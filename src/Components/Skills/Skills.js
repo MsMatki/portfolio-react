@@ -11,9 +11,9 @@ const Skills = props => {
         <div className="container">
             <div className="row" style={props}>
               <Spring
-                from={{ opacity: 0, transform: "translateX(-100vh)" }}
+                from={{ opacity: 0, transform: "translateX(-200px)" }}
                 to={props.skillsSection ? { opacity: 1, transform: "translateX(0)" } : {opacity: 0}}
-                config={{ tension: 100 }}
+                config={{mass: 1, tension: 280, friction: 120 }}
               >
                 {props => (
                   <Fragment>
@@ -63,9 +63,9 @@ const Skills = props => {
               </Spring>
 
               <Spring
-                from={{opacity:0, transform: "translateX(100vh)" }}
+                from={{opacity:0, transform: "translateX(200px)" }}
                 to={props.skillsSection ? {opacity:1,  transform: "translateX(0)" } : {opacity:0}}
-                config={{ tension: 100 }}
+                config={{mass: 1, tension: 280, friction: 120 }}
               >
                 {props => (
                   <div className="col-lg-6" style={props}>
@@ -73,7 +73,7 @@ const Skills = props => {
                     <br />
                     <h5>My Skills</h5>
 
-                    <ProgressBarIndicator />
+                    <ProgressBarIndicator skillsSection={props.skillsSection}/>
                   </div>
                 )}
               </Spring>
