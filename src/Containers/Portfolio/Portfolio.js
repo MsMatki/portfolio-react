@@ -65,6 +65,7 @@ class Portfolio extends Component {
     });
   }
 
+
   toggleSideDrawerHandler = () => {
     if (!this.state.toggleSideDrawer) {
       this.setState({
