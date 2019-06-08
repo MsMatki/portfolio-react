@@ -24,7 +24,13 @@ const Item = styled(animated.div)`
   border-radius: 5px;
   margin: 10px;
   will-change: transform, opacity;
+  
 
 `
 
-export {Container, Item }
+const Text = styled(animated.div)`
+  color: black;
+  font-size: 1.2em;
+`
+
+export {Container, Item, Text }

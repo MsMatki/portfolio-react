@@ -5,7 +5,7 @@
     width: 100%;
     overflow: hidden;
     user-select: none;
-    background: lightblue;
+    background: rgb(230,230,230);
     padding: 20px;
     display: flex;
     align-items: center;
@@ -16,3 +16,21 @@
 
 
 
+.Container{
+  box-shadow: 1px 1px 2px black !important;
+
+}
+
+.Container{
+  font-weight: bold;
+  
+  color: rgb(92, 91, 91);
+}
+
+.Container span{
+  text-shadow: -1px -1px 1px black;
+  font-size: 1.3em;
+}
+.Container:hover{
+  color: #007bff !important;
+}

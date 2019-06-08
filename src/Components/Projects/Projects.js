@@ -18,14 +18,17 @@ class Projects extends Component {
       { title: "Neighbourhood Map", background: img4 },
       { title: "MyReads App", background: img5 },
       { title: "Cool Movies", background: img6 }
-    ]
+    ],
+    displayText: 'Portfolio'
   };
+
+
 
   render() {
     return (
       <section className={classes.Projects} id="portfolio">
         <h1>My Portfolio</h1>
-        <Carousal items={this.state.items} />
+        <Carousal text={this.state.displayText} items={this.state.items} />
       </section>
     );
   }

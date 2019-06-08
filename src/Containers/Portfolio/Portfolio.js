@@ -21,50 +21,46 @@ class Portfolio extends Component {
   };
 
   componentDidMount() {
-
-   const skills = document.querySelector('#skills').offsetTop;
-   const about = document.querySelector('#about').offsetTop;
-   const portfolio = document.querySelector('#portfolio').offsetTop;
-   const contact = document.querySelector('#contact').offsetTop;
-    
-
-    document.addEventListener("scroll", () => {
-
-     
-      if(window.pageYOffset >= about - 400){
-        this.setState({ aboutSection: true })
-      }
-      if(window.pageYOffset >= skills - 200){
-        this.setState({ skillsSection: true })
-      }
-      if(window.pageYOffset >= portfolio){
-        this.setState({ portfolioSection: true })
-      } 
-      if(window.pageYOffset >= contact){
-        this.setState({ contactSection: true })
-      }
-      // Navigation slide in top when scrolling down
-      if (window.pageYOffset >= 300) {
-        this.setState({
-          responsiveNavSlideIn: true
-        });
-      } else {
-        this.setState({
-          responsiveNavSlideIn: false
-        });
-      }
-      // Parallax scrolling Hero image
-      const background = document.querySelector(".Hero__Hero__3KA_6");
-      if (window.innerWidth > 768) {
-        background.style.backgroundPositionY =
-          (window.pageYOffset - background.offsetTop) / 1.3 + "px";
-      } else {
-        background.style.backgroundPositionY = 0;
-      }
-      
-    });
+    document.addEventListener("scroll", this.onScroll, true);
   }
 
+  onScroll = () => {
+    const skills = document.querySelector("#skills").offsetTop;
+    const about = document.querySelector("#about").offsetTop;
+    const portfolio = document.querySelector("#portfolio").offsetTop;
+    const contact = document.querySelector("#contact").offsetTop;
+
+    if (window.pageYOffset >= about - 400) {
+      this.setState({ aboutSection: true });
+    }
+    if (window.pageYOffset >= skills - 200) {
+      this.setState({ skillsSection: true });
+    }
+    if (window.pageYOffset >= portfolio) {
+      this.setState({ portfolioSection: true });
+    }
+    if (window.pageYOffset >= contact) {
+      this.setState({ contactSection: true });
+    }
+    // Navigation slide in top when scrolling down
+    if (window.pageYOffset >= 300) {
+      this.setState({
+        responsiveNavSlideIn: true
+      });
+    } else {
+      this.setState({
+        responsiveNavSlideIn: false
+      });
+    }
+    // Parallax scrolling Hero image
+    const background = document.querySelector(".Hero__Hero__3KA_6");
+    if (window.innerWidth > 768) {
+      background.style.backgroundPositionY =
+        (window.pageYOffset - background.offsetTop) / 1.3 + "px";
+    } else {
+      background.style.backgroundPositionY = 0;
+    }
+  };
 
   toggleSideDrawerHandler = () => {
     if (!this.state.toggleSideDrawer) {
@@ -91,8 +87,8 @@ class Portfolio extends Component {
         />
         <SideDrawer sideDrawer={this.state.toggleSideDrawer} />
         <Hero />
-        <About aboutSection={this.state.aboutSection}/>
-        <Skills skillsSection={this.state.skillsSection}/>
+        <About aboutSection={this.state.aboutSection} />
+        <Skills skillsSection={this.state.skillsSection} />
         <Projects />
         <Contact />
         <Footer />
