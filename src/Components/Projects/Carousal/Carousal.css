@@ -1,36 +1,20 @@
+
+
 .Carousal{
-  margin: 0;
-    padding: 0;
-    height: 700px;
-    width: 100%;
-    overflow: hidden;
-    user-select: none;
-    background: rgb(230,230,230);
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-
-
-
-
-.Container{
-  box-shadow: 1px 1px 2px black !important;
-
+.Item{
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 0 5px;
 }
 
-.Container{
-  font-weight: bold;
-  
-  color: rgb(92, 91, 91);
-}
+.Item img{
+  max-width: 100%;
+  height: auto;
 
-.Container span{
-  text-shadow: -1px -1px 1px black;
-  font-size: 1.3em;
-}
-.Container:hover{
-  color: #007bff !important;
 }

@@ -8,10 +8,88 @@
 .Dark{
     background-color: rgba(0, 0, 0, 0);
     height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.Heading{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 30px;
+
+}
+.Heading h2{
+    font-weight: 200;
+    font-size: 3em;
+}
+
+.Heading h1{
+    
+    font-size: 4em;
+    font-weight: 200;
+}
+
+.Heading h1 span{
+    font-weight: bold;
+}
+/* ==================== Social icons =================== */
+.Icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.Icons > span > a{
+
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    height: 60px;
+    width: 60px;
+    margin:5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    box-shadow: 0 0 6px #007bff;
+}
+
+.Icons > span > a:hover{
+    box-shadow: 0 0 10px 2px #007bff;
+    transition: 0.2s;
+}
+
+.Icons > span > a > i{
+    font-size: 30px !important;
+}
+
 
 @media(max-width: 768px){
     .Hero{
         background-attachment: fixed;
     }
+    .Heading h2{
+        font-size: 2em;
+    }
+    
+    .Heading h1{   
+        font-size: 3em;
+    }
+
 }
+
+@media(max-width: 578px){
+    .Heading h2{
+        font-size: 1.5em;
+    }
+    
+    .Heading h1{   
+        font-size: 2em;
+    } 
+   
+}
+
+

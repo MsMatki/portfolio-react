@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import classes from "./Projects.css";
 import Carousal from "./Carousal/Carousal";
 
-import img1 from "../../Assets/Images/img1.png";
-import img2 from "../../Assets/Images/img2.png";
-import img3 from "../../Assets/Images/img3.png";
-import img4 from "../../Assets/Images/img4.png";
-import img5 from "../../Assets/Images/img5.png";
-import img6 from "../../Assets/Images/img6.png";
+import img1 from "../../Assets/Images/responsive1.png";
+import img2 from "../../Assets/Images/responsive2.png";
+import img3 from "../../Assets/Images/responsive3.png";
+import img4 from "../../Assets/Images/responsive4.png";
+import img5 from "../../Assets/Images/responsive5.png";
+import img6 from "../../Assets/Images/responsive6.png";
 
 class Projects extends Component {
   state = {

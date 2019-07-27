@@ -33,7 +33,7 @@ class Portfolio extends Component {
     if (window.pageYOffset >= about - 400) {
       this.setState({ aboutSection: true });
     }
-    if (window.pageYOffset >= skills - 200) {
+    if (window.pageYOffset >= skills - 300) {
       this.setState({ skillsSection: true });
     }
     if (window.pageYOffset >= portfolio) {
