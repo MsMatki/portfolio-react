@@ -8,6 +8,7 @@ import SideDrawer from "../../Components/Navigation/SideDrawer/SideDrawer";
 import Skills from "../../Components/Skills/Skills";
 import Projects from "../../Components/Projects/Projects";
 import Contact from "../../Components/Contact/Contact";
+import Data from '../../Data/Data'
 
 class Portfolio extends Component {
   state = {
@@ -21,7 +22,7 @@ class Portfolio extends Component {
   };
 
   componentDidMount() {
-    document.addEventListener("scroll", this.onScroll, true);
+    document.addEventListener("scroll", this.onScroll);
   }
 
   onScroll = () => {
@@ -76,6 +77,10 @@ class Portfolio extends Component {
     }
   };
 
+  componentWillUnmount(){
+    document.removeEventListener('scroll', this.onScroll);
+  }
+
   render() {
     return (
       <div className={classes.Portfolio}>
@@ -89,7 +94,7 @@ class Portfolio extends Component {
         <Hero />
         <About aboutSection={this.state.aboutSection} />
         <Skills skillsSection={this.state.skillsSection} />
-        <Projects />
+        <Projects items={this.props.items}/>
         <Contact />
         <Footer />
       </div>

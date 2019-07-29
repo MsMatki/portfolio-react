@@ -55,6 +55,7 @@
     "react-dom": "^16.8.6",
     "react-id-swiper": "^2.1.2",
     "react-media": "^1.9.2",
+    "react-router-dom": "^5.0.1",
     "react-scroll": "^1.7.11",
     "react-slick": "^0.24.0",
     "react-spring": "^8.0.20",

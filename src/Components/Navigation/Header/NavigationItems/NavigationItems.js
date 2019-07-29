@@ -10,20 +10,26 @@ class NavigationItems extends Component {
   };
 
   componentDidMount() {
-    document.addEventListener('scroll', () => {
-      if (window.pageYOffset >= 500) {
-        this.setState({
-          windowOffset: -100,
-          scrollDuration: 1000
-        });
-      } else {
-        this.setState({
-          windowOffset: 0,
-          scrollDuration: 1300
-        });
-      }
-    })
+    document.addEventListener('scroll', this.onScroll);
    
+  }
+
+  onScroll = () => {
+    if (window.pageYOffset >= 500) {
+      this.setState({
+        windowOffset: -100,
+        scrollDuration: 1000
+      });
+    } else {
+      this.setState({
+        windowOffset: 0,
+        scrollDuration: 1300
+      });
+    }
+  }
+
+  componentWillUnmount(){
+    document.removeEventListener('scroll', this.onScroll);
   }
 
   render() {

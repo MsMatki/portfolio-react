@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
-import Portfolio from './Containers/Portfolio/Portfolio';
+import Data from './Data/Data'
 require('./App.css');
 
 
 function App() {
+
+  
   return (
     <div className="App">
-        <Portfolio/>
+      <Data/>
     </div>
   );
 }
