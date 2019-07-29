@@ -8,7 +8,7 @@ import SideDrawer from "../../Components/Navigation/SideDrawer/SideDrawer";
 import Skills from "../../Components/Skills/Skills";
 import Projects from "../../Components/Projects/Projects";
 import Contact from "../../Components/Contact/Contact";
-import Data from '../../Data/Data'
+import { Spring } from "react-spring/renderprops";
 
 class Portfolio extends Component {
   state = {
@@ -18,11 +18,18 @@ class Portfolio extends Component {
     skillsSection: false,
     aboutSection: false,
     portfolioSection: false,
-    contactSection: false
+    contactSection: false,
+    onPageLoading: true
   };
 
   componentDidMount() {
-    document.addEventListener("scroll", this.onScroll);
+    document.addEventListener("scroll", this.onScroll, false);
+    document.addEventListener("DOMContentLoaded", this.onPageLoad);
+    
+  }
+
+  onPageLoad = () => {
+    this.setState({onPageLoading: false})
   }
 
   onScroll = () => {
@@ -31,6 +38,7 @@ class Portfolio extends Component {
     const portfolio = document.querySelector("#portfolio").offsetTop;
     const contact = document.querySelector("#contact").offsetTop;
 
+   
     if (window.pageYOffset >= about - 400) {
       this.setState({ aboutSection: true });
     }
@@ -43,6 +51,7 @@ class Portfolio extends Component {
     if (window.pageYOffset >= contact) {
       this.setState({ contactSection: true });
     }
+    
     // Navigation slide in top when scrolling down
     if (window.pageYOffset >= 300) {
       this.setState({
@@ -57,7 +66,7 @@ class Portfolio extends Component {
     const background = document.querySelector(".Hero__Hero__3KA_6");
     if (window.innerWidth > 768) {
       background.style.backgroundPositionY =
-        (window.pageYOffset - background.offsetTop) / 1.3 + "px";
+        (window.pageYOffset - background.offsetTop) / 1.5 + "px";
     } else {
       background.style.backgroundPositionY = 0;
     }
@@ -78,12 +87,21 @@ class Portfolio extends Component {
   };
 
   componentWillUnmount(){
-    document.removeEventListener('scroll', this.onScroll);
+    document.removeEventListener('scroll', this.onScroll, false);
+    document.removeEventListener("DOMContentLoaded", this.onPageLoad);
   }
 
   render() {
+
+    console.log(this.state.onPageLoading)
     return (
-      <div className={classes.Portfolio}>
+      <Spring
+      from={{ opacity: 0 }}
+      to={{ opacity: 1 }}
+      config={{ mass: 1, tension: 400, friction: 120, delay: 500 }}
+    >
+      {props => (
+      <div className={classes.Portfolio} style={props}>
         <Header
           scrollSlideNav={this.state.responsiveNavSlideIn}
           toggleDrawer={this.toggleSideDrawerHandler}
@@ -92,12 +110,14 @@ class Portfolio extends Component {
         />
         <SideDrawer sideDrawer={this.state.toggleSideDrawer} />
         <Hero />
-        <About aboutSection={this.state.aboutSection} />
-        <Skills skillsSection={this.state.skillsSection} />
+        <About aboutSection={this.state.aboutSection} onPageLoading={this.state.onPageLoading}/>
+        <Skills skillsSection={this.state.skillsSection} onPageLoading={this.state.onPageLoading}/>
         <Projects items={this.props.items}/>
         <Contact />
         <Footer />
       </div>
+      )}
+      </Spring>
     );
   }
 }

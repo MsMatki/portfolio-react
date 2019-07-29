@@ -8,7 +8,7 @@ const NavItem = props => {
       <Link
         spy={true}
         smooth={true}
-        activeClass={classes.active}
+        activeClass={classes.Active}
         duration={props.scrollDuration}
         className={classes.Link}
         to={props.title}

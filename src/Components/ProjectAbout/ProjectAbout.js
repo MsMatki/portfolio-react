@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import classes from "./ProjectAbout.css";
 import Footer from "../Navigation/Footer/Footer";
-import img1 from "../../Assets/Images/responsive1.png";
+import {Link} from 'react-router-dom'
+import { Spring } from "react-spring/renderprops";
 
 class ProjectAbout extends Component {
   state = {
@@ -12,12 +13,22 @@ class ProjectAbout extends Component {
     let id = sessionStorage.getItem("id");
     let filteredArr = this.props.items.filter(item => item.id == id);
     this.setState({ filtered: filteredArr });
+
+   
+
   }
 
   render() {
+    
     console.log(this.state.filtered);
     return (
-      <section className={classes.Section}>
+      <Spring
+      from={{ opacity: 0 }}
+      to={{ opacity: 1 }}
+      config={{ mass: 1, tension: 400, friction: 120, delay: 100 }}
+    >
+      {props => (
+      <section className={classes.Section} style={props}>
         <div className={classes.Background} />
         <div className="container">
           {this.state.filtered.map(item => {
@@ -35,10 +46,10 @@ class ProjectAbout extends Component {
                     <p>
                       {item.desc}
                     </p>
-                    <div className="buttons">
-                      <a href="">Back</a>
-                      <a href="">View Github</a>
-                      <a href="">Preview</a>
+                    <div className={classes.Buttons}>
+                    <Link to="/"><span>Back</span></Link>
+                      <span><a target="_blank" href={item.githubURL}>View Github</a></span>
+                      <span><a target="_blank" href={item.previewUrl}>Preview</a></span>
                     </div>
                   </div>
                 </div>
@@ -49,6 +60,8 @@ class ProjectAbout extends Component {
 
         <Footer />
       </section>
+      )}
+      </Spring>
     );
   }
 }

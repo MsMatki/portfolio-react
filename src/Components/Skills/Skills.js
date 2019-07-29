@@ -6,11 +6,13 @@ import { Spring } from "react-spring/renderprops";
 
 const Skills = props => {
   return (
+
     <section className={classes.Skills} id="skills">
       <div className={classes.Paralax}>
         <div className="container">
             <div className="row" style={props}>
               <Spring
+                immediate={props.onPageLoading}
                 from={{ opacity: 0, transform: "translateX(-200px)" }}
                 to={props.skillsSection ? { opacity: 1, transform: "translateX(0)" } : {opacity: 0}}
                 config={{mass: 1, tension: 280, friction: 120 }}
@@ -63,6 +65,7 @@ const Skills = props => {
               </Spring>
 
               <Spring
+                immediate={props.onPageLoading}
                 from={{opacity:0, transform: "translateX(200px)" }}
                 to={props.skillsSection ? {opacity:1,  transform: "translateX(0)" } : {opacity:0}}
                 config={{mass: 1, tension: 280, friction: 120 }}
@@ -73,12 +76,12 @@ const Skills = props => {
                     <br />
                     <h5>My Skills</h5>
 
-                    <ProgressBarIndicator skillsSection={props.skillsSection}/>
+                    <ProgressBarIndicator skillsSection={props.skillsSection} onPageLoading={props.onPageLoading}/>
                   </div>
                 )}
               </Spring>
             </div>
-         
+        
         </div>
       </div>
     </section>

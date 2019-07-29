@@ -19,7 +19,7 @@ class ProgressBarIndicator extends Component {
 
   onScroll = () => {
     const skills = document.querySelector("#skills").offsetTop;
-    if (window.pageYOffset >= skills - 200) {
+    if (window.pageYOffset >= skills - 300) {
       this.setState({ skillsSection: true });
     }
 
@@ -37,6 +37,7 @@ class ProgressBarIndicator extends Component {
           ? this.state.skills.map(skill => {
               return (
                 <Spring
+                  immediate={this.props.onPageLoading}
                   key={skill.title}
                   from={{ number: 0 }}
                   to={{ number: skill.indicator }}

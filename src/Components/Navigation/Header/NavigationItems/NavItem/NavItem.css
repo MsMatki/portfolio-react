@@ -15,8 +15,12 @@
     font-family: "Josefin Sans"
 }
 
-.active{
+.Active{
     color:#007bff !important;
+}
+
+.ActiveRed{
+    color: #ff0040 !important;
 }
 
 @media(min-width:768px){

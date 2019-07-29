@@ -1,5 +1,5 @@
 .Skills{
-    background-image: url('../../Assets/Images/skill-background.jpg');
+    background-image: url('../../Assets/Images/galaxy.jpg');
     background-size: cover;
     background-attachment: fixed;
    
@@ -66,6 +66,6 @@
 }
 
 .Paralax{
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.6);
     
 }

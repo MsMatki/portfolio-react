@@ -1,5 +1,5 @@
 .Contact{
- background-image: url('../../Assets/Images/Contact-Us-Background.jpg');
+ background-image: url('../../Assets/Images/hero-background.jpg');
  background-attachment: fixed;
  background-size: cover;
 
@@ -34,7 +34,7 @@ textarea{
 }
 
 .Background{
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.7);
 
 }
 

@@ -31,7 +31,7 @@ const ResponsiveNav = props => {
           toggleDrawer={props.toggleDrawer}
           openClass={props.openClass}
         />
-        <NavigationItems color={navLinkColor} />
+        <NavigationItems color={navLinkColor}/>
       </div>
     </nav>
   );

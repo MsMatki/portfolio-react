@@ -6,7 +6,7 @@ import ResponsiveNav from "./ResponsiveNav/ResponsiveNav";
 const Header = props => {
   return (
     <header className={classes.Header}>
-      <Nav toggleDrawer={props.toggleDrawer} openClass={props.openClass} />
+      <Nav toggleDrawer={props.toggleDrawer} openClass={props.openClass}/>
       <ResponsiveNav
         scrollSlideNav={props.scrollSlideNav}
         toggleDrawer={props.toggleDrawer}
