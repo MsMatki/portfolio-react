@@ -1,8 +1,14 @@
 .Contact{
- background-image: url('../../Assets/Images/hero-background.jpg');
+ background-image: url('../../Assets/Images/contact-background-m.jpg');
  background-attachment: fixed;
  background-size: cover;
 
+}
+
+@media(min-width: 992px){
+  .Contact{
+    background-image: url('../../Assets/Images/contact-background-d.jpg');
+  }  
 }
 
 .Contact input, textarea{

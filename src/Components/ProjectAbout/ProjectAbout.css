@@ -1,12 +1,7 @@
 .Section{
  background-color: rgb(230,230,230);
- height: 150vh;
 }
-@media(min-width: 768px){
-  .Section{
-    height: 110vh;
-   }
-}
+
 @media(min-width: 992px){
   .Section{
     height: 90vh;
