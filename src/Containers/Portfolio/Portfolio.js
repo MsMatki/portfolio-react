@@ -110,7 +110,7 @@ class Portfolio extends Component {
         />
         <SideDrawer sideDrawer={this.state.toggleSideDrawer} />
         <Hero />
-        <About aboutSection={this.state.aboutSection} onPageLoading={this.state.onPageLoading}/>
+        <About aboutSection={this.state.aboutSection} onPageLoading={this.state.onPageLoading} about={this.props.about}/>
         <Skills skillsSection={this.state.skillsSection} onPageLoading={this.state.onPageLoading}/>
         <Projects items={this.props.items}/>
         <Contact />

@@ -73,13 +73,19 @@ class Data extends Component{
     technologies : ["React", "Redux", "JavaScript"]
    },
   
-  ]
+  ],
+  about:{
+   mainTitle: "About Me",
+   title: "Front End Web Developer",
+   aboutMeDesc: "I am Bartol Bilankov a Front End Web Developer living in Manchester. I’ve felt a strong connection to dragons since I was a kid, I fell in love with them instantly, They are wise yet sneaky, they are incredibly beautiful. They sort of straddle the line between being good and evil, and basically transcend the labels. They are badass as hell and very intelligent, just everything about them I found fascinating.",
+   techDesc: "I’m extremely passionate about Web Development and Design in all its forms. I still remember the first time I created an HTML page and opened it in the browser. A whole new world of possibilities appeared before my eyes. I became really passionate and kept creating since then. It absolutely has its ups and downs but if you love what you do and are able to provide value to people, the outcomes are far more rewarding! I love technology, enjoy creating a great user experience, and looking for an exciting career with a lot of growth potential."
+  }
  }
 
 render(){
  return(
   <Fragment>
-   <Portfolio items={this.state.projects}/>
+   <Portfolio items={this.state.projects} about={this.state.about}/>
   </Fragment>
  );
 }

@@ -19,8 +19,8 @@ const Hero = props => {
         </h1>
         </div>
         <div className={classes.Icons}>
-            <span><a href=""><i className="fab fa-github"></i></a></span>
-            <span><a href=""><i className="fab fa-linkedin-in"></i></a></span>
+            <span><a target="_blank" href="https://github.com/MsMatki"><i className="fab fa-github"></i></a></span>
+            <span><a target="_blank" href="https://www.linkedin.com/in/bbilankov/"><i className="fab fa-linkedin-in"></i></a></span>
         </div>
       </div>
     </section>

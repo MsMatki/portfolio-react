@@ -1,0 +1,19 @@
+.AboutMe h2{
+ font-weight: bold;
+ color: #3C3C3C;
+}
+
+.AboutMe h6{
+ text-transform: uppercase;
+ color: #3C3C3C;
+}
+
+.hr{
+ background: linear-gradient(to right, #007bff 20%, #E1E1E1 20%);
+ height: 1px;
+}
+
+.Desc{
+ color: grey;
+ font-size: 1.05em;
+}
