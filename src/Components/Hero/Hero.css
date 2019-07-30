@@ -1,5 +1,5 @@
 .Hero{
-    background-image: url('../../Assets/Images/galaxy2-m.png');
+    background-image: url('../../Assets/Images/galaxy2-m.jpg');
     height: 110vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,7 +7,7 @@
 
 @media(min-width: 768px){
     .Hero{
-        background-image: url('../../Assets/Images/galaxy2.png');
+        background-image: url('../../Assets/Images/galaxy2.jpg');
     }  
 }
 
