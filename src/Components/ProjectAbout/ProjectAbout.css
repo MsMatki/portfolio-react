@@ -55,7 +55,7 @@
 
 }
 
-.Buttons span{
+.Buttons a{
   background: linear-gradient(to right, #3C3C3C, rgb(32, 32, 32));
   width: 130px;
   height: 50px;
@@ -68,7 +68,7 @@
   cursor: pointer;
 }
 
-.Buttons span::before{
+.Buttons a::before{
   content: "";
   height: 160%;
   width: 100px;
@@ -79,7 +79,7 @@
   transition: 0.5s;
 }
 
-.Buttons span:hover::before{
+.Buttons a:hover::before{
   transform:translateX(130px) rotate(20deg);
 }
 

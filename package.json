@@ -2,6 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://bartolbilankov.com/",
   "dependencies": {
     "3d-react-carousal": "^2.0.1",
     "@babel/core": "7.4.3",

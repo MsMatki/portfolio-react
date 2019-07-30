@@ -44,8 +44,8 @@ class ProjectAbout extends Component {
                     </p>
                     <div className={classes.Buttons}>
                     <Link to="/"><span>View All</span></Link>
-                      <span><a target="_blank" href={item.githubURL}>View Github</a></span>
-                      <span><a target="_blank" href={item.previewUrl}>Preview</a></span>
+                      <a target="_blank" href={item.githubURL}>View Github</a>
+                     <a target="_blank" href={item.previewUrl}>Preview</a>
                     </div>
                   </div>
                 </div>
