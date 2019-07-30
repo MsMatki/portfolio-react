@@ -97,7 +97,7 @@ class Portfolio extends Component {
       <Spring
       from={{ opacity: 0 }}
       to={{ opacity: 1 }}
-      config={{ mass: 1, tension: 400, friction: 120, delay: 500 }}
+      config={{ mass: 1, tension: 400, friction: 120, delay: 100 }}
     >
       {props => (
       <div className={classes.Portfolio} style={props}>
