@@ -4,7 +4,7 @@
     background-attachment: fixed;
    
 }
-@media(min-width: 768px){
+@media(min-width: 678px){
     .Skills{
         background-image: url('../../Assets/Images/galaxy.jpg');
     }

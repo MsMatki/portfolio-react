@@ -93,7 +93,6 @@ class Portfolio extends Component {
 
   render() {
 
-    console.log(this.state.onPageLoading)
     return (
       <Spring
       from={{ opacity: 0 }}
