@@ -5,7 +5,7 @@
 
 }
 
-@media(min-width: 992px){
+@media(min-width: 768px){
   .Contact{
     background-image: url('../../Assets/Images/contact-background-d.jpg');
   }  

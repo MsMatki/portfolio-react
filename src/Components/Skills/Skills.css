@@ -1,8 +1,13 @@
 .Skills{
-    background-image: url('../../Assets/Images/galaxy.jpg');
+    background-image: url('../../Assets/Images/galaxy-m.jpg');
     background-size: cover;
     background-attachment: fixed;
    
+}
+@media(min-width: 768px){
+    .Skills{
+        background-image: url('../../Assets/Images/galaxy.jpg');
+    }
 }
 
 .Skills ul{
