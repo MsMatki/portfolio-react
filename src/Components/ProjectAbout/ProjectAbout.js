@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import classes from "./ProjectAbout.css";
-import Footer from "../Navigation/Footer/Footer";
 import {Link} from 'react-router-dom'
 import { Spring } from "react-spring/renderprops";
 
@@ -13,8 +12,6 @@ class ProjectAbout extends Component {
     let id = sessionStorage.getItem("id");
     let filteredArr = this.props.items.filter(item => item.id == id);
     this.setState({ filtered: filteredArr });
-
-   
 
   }
 
@@ -29,7 +26,6 @@ class ProjectAbout extends Component {
     >
       {props => (
       <section className={classes.Section} style={props}>
-        <div className={classes.Background} />
         <div className="container">
           {this.state.filtered.map(item => {
             return (
@@ -47,7 +43,7 @@ class ProjectAbout extends Component {
                       {item.desc}
                     </p>
                     <div className={classes.Buttons}>
-                    <Link to="/"><span>Back</span></Link>
+                    <Link to="/"><span>View All</span></Link>
                       <span><a target="_blank" href={item.githubURL}>View Github</a></span>
                       <span><a target="_blank" href={item.previewUrl}>Preview</a></span>
                     </div>
@@ -57,8 +53,6 @@ class ProjectAbout extends Component {
             );
           })}
         </div>
-
-        <Footer />
       </section>
       )}
       </Spring>

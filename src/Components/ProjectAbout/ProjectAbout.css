@@ -1,6 +1,19 @@
 .Section{
  background-color: rgb(230,230,230);
+ height: 150vh;
 }
+@media(min-width: 768px){
+  .Section{
+    height: 110vh;
+   }
+}
+@media(min-width: 992px){
+  .Section{
+    height: 90vh;
+   }
+}
+
+
 
 .Background{
  background-image: url('../../Assets/Images/hero2-background.jpg');
@@ -18,11 +31,13 @@
 
 .Content h2{
   font-weight: bold;
-  color: #3C3C3C
+  color: #3C3C3C;
+  text-align: left;
 }
 
 .Content p{
  color: grey;
+ text-align: left;
 }
 
 .Content hr{
@@ -41,7 +56,7 @@
 }
 
 .Buttons span{
-  background: linear-gradient(to right, #007bff, #248dfc);
+  background: linear-gradient(to right, #3C3C3C, rgb(32, 32, 32));
   width: 130px;
   height: 50px;
   margin: 0 3px;

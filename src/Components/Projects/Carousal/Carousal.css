@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+/* @media(min-width: 992px){
+  .Carousal{
+    height: 65vh;
+  }
+} */
+
 .Item{
   cursor: pointer;
   margin-bottom: 10px;

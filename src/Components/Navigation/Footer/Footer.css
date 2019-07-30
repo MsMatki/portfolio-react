@@ -1,4 +1,14 @@
+@font-face {
+ font-family: tattoo;
+ src: url(../../../Assets/Fonts/tattoo.regular.ttf);
+}
+
 .Footer{
  height:80px;
  background-color: rgb(50,50,50);
+}
+
+.Footer h1{
+  font-family: "tattoo";
+  color: white;
 }

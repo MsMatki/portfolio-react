@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import classes from "./Carousal.css";
 import { Link } from "react-router-dom";
-
+import { Spring } from "react-spring/renderprops";
 
 class Carousal extends Component{
 
@@ -11,7 +11,14 @@ getIdHandler = (id) => sessionStorage.setItem('id', id);
 
 render(){
   return (
-    <div className="container">
+    <Spring
+    from={{ opacity: 0 }}
+    to={{ opacity: 1 }}
+    config={{ mass: 1, tension: 400, friction: 120, delay: 300 }}
+  >
+     {props => (
+    <div className="container" style={props}>
+      
       <div className="row">
         <div className={classes.Carousal}>
 
@@ -30,7 +37,8 @@ render(){
         </div>
       </div>
     </div>
-
+     )}
+    </Spring>
   );
         }
 };

@@ -46,16 +46,13 @@ class About extends Component {
                   <h2>About Me</h2>
                   <h6>Front End Web Developer</h6>
                   <hr className={classes.hr} />
-                  <p>
-                    I am Bartol Bilankov a Front End Web Developer living in
-                    Manchester. I’m extremely passionate about Web Development
-                    and Design in all its forms, and the main reason is that
-                    Front-end development satisfies my need for creativity. It
-                    enabled me to easily put my ideas into digital form and get
-                    results back really quick.
+                  <p className={classes.Desc}>
+                    I am <strong>Bartol Bilankov</strong> a Front End Web Developer living in
+                    Manchester. I’ve felt a strong connection to dragons since I was a kid, I fell in love with them instantly, They are wise yet sneaky, they are incredibly beautiful. They sort of straddle the line between being good and evil, and basically transcend the labels. They are badass as hell and very intelligent, just everything about them I found fascinating.
                   </p>
-                  <p>
-                    I still remember the first time I created an HTML page and
+                  <p className={classes.Desc}>
+                  I’m extremely passionate about Web Development
+                    and Design in all its forms. I still remember the first time I created an HTML page and
                     opened it in the browser. A whole new world of possibilities
                     appeared before my eyes. I became really passionate and kept
                     creating since then. It absolutely has its ups and downs but
@@ -63,8 +60,7 @@ class About extends Component {
                     people, the outcomes are far more rewarding! I love
                     technology, enjoy creating a great user experience, and
                     looking for an exciting career with a lot of growth
-                    potential. If you are a business seeking web presence or an
-                    employer loking to hire, you can get in touch with me here
+                    potential.
                   </p>
                 </div>
               )}
