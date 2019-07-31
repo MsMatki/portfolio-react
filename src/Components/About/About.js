@@ -25,7 +25,7 @@ class About extends Component {
                         ? { opacity: 1, transform: "translateX(0)" }
                         : { opacity: 0 }
                     }
-                    config={{ mass: 1, tension: 280, friction: 120 }}
+                    config={{ mass: 1, tension: 280, friction: 80 }}
                   >
                     {props => (
                       <div
@@ -46,7 +46,7 @@ class About extends Component {
                         ? { opacity: 1, transform: "translateX(0)" }
                         : { opacity: 0 }
                     }
-                    config={{ mass: 1, tension: 280, friction: 120 }}
+                    config={{ mass: 1, tension: 280, friction: 80 }}
                   >
                     {props => (
                       <div

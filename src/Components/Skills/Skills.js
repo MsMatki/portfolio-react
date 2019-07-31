@@ -25,7 +25,7 @@ const Skills = props => {
                         ? { opacity: 1, transform: "translateX(0)" }
                         : { opacity: 0 }
                     }
-                    config={{ mass: 1, tension: 280, friction: 120 }}
+                    config={{ mass: 1, tension: 280, friction: 80 }}
                   >
                     {props => (
                       <Fragment>
@@ -55,7 +55,7 @@ const Skills = props => {
                         ? { opacity: 1, transform: "translateX(0)" }
                         : { opacity: 0 }
                     }
-                    config={{ mass: 1, tension: 280, friction: 120 }}
+                    config={{ mass: 1, tension: 280, friction: 80 }}
                   >
                     {props => (
                       <div className="col-lg-6" style={props}>

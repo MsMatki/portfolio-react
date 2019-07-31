@@ -45,10 +45,10 @@ class Portfolio extends Component {
     if (window.pageYOffset >= skills - 300) {
       this.setState({ skillsSection: true });
     }
-    if (window.pageYOffset >= portfolio) {
+    if (window.pageYOffset >= portfolio - 350) {
       this.setState({ portfolioSection: true });
     }
-    if (window.pageYOffset >= contact) {
+    if (window.pageYOffset >= contact - 350) {
       this.setState({ contactSection: true });
     }
     
@@ -111,8 +111,8 @@ class Portfolio extends Component {
         <Hero />
         <About aboutSection={this.state.aboutSection} onPageLoading={this.state.onPageLoading} about={this.props.about}/>
         <Skills skillsSection={this.state.skillsSection} onPageLoading={this.state.onPageLoading}/>
-        <Projects items={this.props.items}/>
-        <Contact />
+        <Projects items={this.props.items} portfolioSection={this.state.portfolioSection}/>
+        <Contact contactSection={this.state.contactSection} />
         <Footer />
       </div>
       )}
