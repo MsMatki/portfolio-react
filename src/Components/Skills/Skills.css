@@ -2,6 +2,7 @@
     background-image: url('../../Assets/Images/galaxy-m.jpg');
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
    
 }
 @media(min-width: 678px){
