@@ -19,7 +19,7 @@ class ProgressBarIndicator extends Component {
 
   onScroll = () => {
     const skills = document.querySelector("#skills").offsetTop;
-    if (window.pageYOffset >= skills - 300) {
+    if (window.pageYOffset >= skills - 400) {
       this.setState({ skillsSection: true });
     }
 
