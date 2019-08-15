@@ -15,11 +15,9 @@ class Portfolio extends Component {
     responsiveNavSlideIn: false,
     toggleSideDrawer: false,
     hambOpenClass: "",
-    skillsSection: false,
-    aboutSection: false,
-    portfolioSection: false,
-    contactSection: false,
-    onPageLoading: true
+    onPageLoading: true,
+    halfShown: false,
+    active: ''
   };
 
   componentDidMount() {
@@ -33,24 +31,18 @@ class Portfolio extends Component {
   }
 
   onScroll = () => {
-    const skills = document.querySelector("#skills").offsetTop;
-    const about = document.querySelector("#about").offsetTop;
-    const portfolio = document.querySelector("#portfolio").offsetTop;
-    const contact = document.querySelector("#contact").offsetTop;
 
-   
-    if (window.pageYOffset >= about - 400) {
-      this.setState({ aboutSection: true });
-    }
-    if (window.pageYOffset >= skills - 300) {
-      this.setState({ skillsSection: true });
-    }
-    if (window.pageYOffset >= portfolio - 350) {
-      this.setState({ portfolioSection: true });
-    }
-    if (window.pageYOffset >= contact - 350) {
-      this.setState({ contactSection: true });
-    }
+    const slideSections = document.querySelectorAll('.slideIn');
+
+    slideSections.forEach(slideSection => {
+      const slideInAt = (window.scrollY + window.innerHeight) - slideSection.offsetHeight / 2;
+      const isHalfShown = slideInAt > slideSection.offsetTop;
+      this.setState({halfShown: isHalfShown})
+
+      if(this.state.halfShown){
+          slideSection.classList.add('active'); 
+      }     
+    })
     
     // Navigation slide in top when scrolling down
     if (window.pageYOffset >= 300) {
@@ -92,7 +84,7 @@ class Portfolio extends Component {
   }
 
   render() {
-
+    let active = document.querySelectorAll('.active');
     return (
       <Spring
       from={{ opacity: 0 }}
@@ -109,10 +101,10 @@ class Portfolio extends Component {
         />
         <SideDrawer sideDrawer={this.state.toggleSideDrawer} />
         <Hero />
-        <About aboutSection={this.state.aboutSection} onPageLoading={this.state.onPageLoading} about={this.props.about}/>
-        <Skills skillsSection={this.state.skillsSection} onPageLoading={this.state.onPageLoading}/>
-        <Projects items={this.props.items} portfolioSection={this.state.portfolioSection}/>
-        <Contact contactSection={this.state.contactSection} />
+        <About aboutSection={this.state.aboutSection} active={active} onPageLoading={this.state.onPageLoading} about={this.props.about}/>
+        <Skills skillsSection={this.state.skillsSection} active={active} onPageLoading={this.state.onPageLoading}/>
+        <Projects items={this.props.items} active={active} portfolioSection={this.state.portfolioSection}/>
+        <Contact active={active} contactSection={this.state.contactSection} />
         <Footer />
       </div>
       )}

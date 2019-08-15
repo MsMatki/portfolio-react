@@ -9,10 +9,11 @@ import Experience from "./Experience/Experience";
 
 const Skills = props => {
 
+
   return (
     <section className={classes.Skills} id="skills">
       <div className={classes.Paralax}>
-        <div className="container">
+        <div className="container slideIn">
           <Media query={{ minWidth: 768 }}>
             {maches =>
               maches ? (
@@ -21,7 +22,7 @@ const Skills = props => {
                     immediate={props.onPageLoading}
                     from={{ opacity: 0, transform: "translateX(-200px)" }}
                     to={
-                      props.skillsSection
+                      props.active[1]
                         ? { opacity: 1, transform: "translateX(0)" }
                         : { opacity: 0 }
                     }
@@ -51,7 +52,7 @@ const Skills = props => {
                     immediate={props.onPageLoading}
                     from={{ opacity: 0, transform: "translateX(200px)" }}
                     to={
-                      props.skillsSection
+                      props.active[1]
                         ? { opacity: 1, transform: "translateX(0)" }
                         : { opacity: 0 }
                     }

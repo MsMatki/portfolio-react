@@ -9,7 +9,7 @@ const Contact = props => {
   return (
     <section className={classes.Contact} id="contact">
       <form action="" className={classes.Background}>
-        <div className="container">
+        <div className="container slideIn">
           <div className="row">
             <div className="col-xs-12 col-lg-12 mb-5 text-center">
               <Media query={{minWidth: 768}}>
@@ -17,7 +17,7 @@ const Contact = props => {
               <Spring
                 from={{ opacity: 0.5, transform: "translatex(-500px)" }}
                 to={
-                  props.contactSection
+                  props.active[3]
                     ? { opacity: 1, transform: "translateX(0)" }
                     : { opacity: 0 }
                 }
@@ -31,8 +31,8 @@ const Contact = props => {
               </Media>
             </div>
           </div>
-          <ContactInfo contactSection={props.contactSection}/>
-          <ContactInput contactSection={props.contactSection}/>
+          <ContactInfo active={props.active} contactSection={props.contactSection}/>
+          <ContactInput active={props.active} contactSection={props.contactSection}/>
         </div>
       </form>
     </section>

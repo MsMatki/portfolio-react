@@ -11,12 +11,12 @@ class Projects extends Component {
     return (
       <Media query={{minWidth: 768}}>
       {matches => matches ? (
-      <section className={classes.Projects} id="portfolio">
+      <section className={`${classes.Projects} slideIn`} id="portfolio">
      
         <Spring
           from={{ opacity: 0.5, transform: "translatex(-500px)" }}
           to={
-            this.props.portfolioSection
+            this.props.active[2]
               ? { opacity: 1, transform: "translateX(0)" }
               : { opacity: 0 }
           }
@@ -28,7 +28,7 @@ class Projects extends Component {
         <Spring
           from={{ opacity: 0, transform: "translateY(-50px)" }}
           to={
-            this.props.portfolioSection
+            this.props.active[2]
               ? { opacity: 1, transform: "translateX(0)" }
               : { opacity: 0 }
           }

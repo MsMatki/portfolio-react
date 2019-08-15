@@ -12,7 +12,7 @@ class About extends Component {
   render() {
     return (
       <section className={classes.About} id="about">
-        <div className="container">
+        <div className="container slideIn">
           <Media query={{ minWidth: 768 }}>
             {matches =>
               matches ? (
@@ -21,7 +21,7 @@ class About extends Component {
                     immediate={this.props.onPageLoading}
                     from={{ opacity: 0, transform: "translateX(-200px)" }}
                     to={
-                      this.props.aboutSection
+                      this.props.active[0]
                         ? { opacity: 1, transform: "translateX(0)" }
                         : { opacity: 0 }
                     }
@@ -42,7 +42,7 @@ class About extends Component {
                     immediate={this.props.onPageLoading}
                     from={{ opacity: 0, transform: "translateX(200px)" }}
                     to={
-                      this.props.aboutSection
+                      this.props.active[0]
                         ? { opacity: 1, transform: "translateX(0)" }
                         : { opacity: 0 }
                     }

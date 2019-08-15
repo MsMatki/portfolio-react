@@ -10,7 +10,7 @@ const ContactInfo = props => (
   <Spring
           from={{ opacity: 0, transform: "translateY(-50px)" }}
           to={
-            props.contactSection
+            props.active[3]
               ? { opacity: 1, transform: "translateX(0)" }
               : { opacity: 0 }
           }
